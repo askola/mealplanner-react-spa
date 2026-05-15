@@ -11,34 +11,34 @@ export function WeekGrid({ day }: WeekGridProps) {
         <GridHeader day={day} />
         <tbody>
           <tr>
-            <th>Aamupala</th>
-            <th>Puuro</th>
-            <th></th>
-            <th>Puuro</th>
-            <th>Leipää ja päällisiä</th>
-            <th>Puuro</th>
-            <th>Leipää ja päällisiä</th>
-            <th>Leipää ja päällisiä</th>
+            <th scope="row">Aamupala</th>
+            <td>Puuro</td>
+            <td></td>
+            <td>Puuro</td>
+            <td>Leipää ja päällisiä</td>
+            <td>Puuro</td>
+            <td>Leipää ja päällisiä</td>
+            <td>Leipää ja päällisiä</td>
           </tr>
           <tr>
-            <th>Lounas</th>
-            <th>Puuro</th>
-            <th>Leipää ja päällisiä</th>
-            <th>Puuro</th>
-            <th>Leipää ja päällisiä</th>
-            <th>Puuro</th>
-            <th></th>
-            <th>Leipää ja päällisiä</th>
+            <th scope="row">Lounas</th>
+            <td>Puuro</td>
+            <td>Leipää ja päällisiä</td>
+            <td>Puuro</td>
+            <td>Leipää ja päällisiä</td>
+            <td>Puuro</td>
+            <td></td>
+            <td>Leipää ja päällisiä</td>
           </tr>
           <tr>
-            <th>Illallinen</th>
-            <th>Puuro</th>
-            <th></th>
-            <th></th>
-            <th>Leipää ja päällisiä</th>
-            <th>Puuro</th>
-            <th>Leipää ja päällisiä</th>
-            <th>Leipää ja päällisiä</th>
+            <th scope="row">Illallinen</th>
+            <td>Puuro</td>
+            <td></td>
+            <td></td>
+            <td>Leipää ja päällisiä</td>
+            <td>Puuro</td>
+            <td>Leipää ja päällisiä</td>
+            <td>Leipää ja päällisiä</td>
           </tr>
         </tbody>
       </table>
