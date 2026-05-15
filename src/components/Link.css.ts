@@ -8,5 +8,5 @@ export const link = style({
 
 export const active = style({
   fontWeight: "bold",
-  backgroundColor: vars.bgColor.darkYellow,
+  backgroundColor: vars.color.amber[700],
 });

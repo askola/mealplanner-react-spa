@@ -1,5 +1,4 @@
 import { useState } from "react";
-import { WeekGrid } from "./WeekGrid";
 import {
   addWeeks,
   format,
@@ -7,6 +6,9 @@ import {
   lastDayOfISOWeek,
   startOfISOWeek,
 } from "date-fns";
+import { SlArrowLeft, SlArrowRight } from "react-icons/sl";
+import * as styles from "./Mealplanner.css";
+import { WeekView } from "./WeekView";
 
 export function MealPlanner() {
   const [day, setDay] = useState(new Date());
@@ -28,16 +30,20 @@ export function MealPlanner() {
     setDay((d) => addWeeks(d, 1));
   };
   return (
-    <>
-      <h1>Viikon ruokasuunnitelma</h1>
+    <div className={styles.root}>
+      <h1 className={styles.h1}>Viikon ruokasuunnitelma</h1>
       <div style={{ display: "flex", flexDirection: "row" }}>
-        <button onClick={prevWeek}>-</button>
-        <h2>
+        <button onClick={prevWeek}>
+          <SlArrowLeft />
+        </button>
+        <h2 className={styles.h2}>
           Viikko {weekNumber} ({mondayOfTheWeek} - {sundayOfTheWeek})
         </h2>
-        <button onClick={nextWeek}>+</button>
+        <button onClick={nextWeek}>
+          <SlArrowRight />
+        </button>
       </div>
-      <WeekGrid day={day}></WeekGrid>
-    </>
+      <WeekView day={day} />
+    </div>
   );
 }
