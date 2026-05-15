@@ -1,6 +1,7 @@
-import * as React from "react";
-import { Link, Outlet, createRootRoute } from "@tanstack/react-router";
+import { Outlet, createRootRoute } from "@tanstack/react-router";
 import "../styles/global.css";
+import { MainMenu } from "../components/MainMenu";
+import { Link } from "../components/Link";
 
 export const Route = createRootRoute({
   component: RootComponent,
@@ -8,36 +9,13 @@ export const Route = createRootRoute({
 
 function RootComponent() {
   return (
-    <React.Fragment>
-      <div className="p-2 flex gap-2 text-lg">
-        <Link
-          to="/"
-          activeProps={{
-            className: "font-bold",
-          }}
-          activeOptions={{ exact: true }}
-        >
-          Meal Planner
-        </Link>{" "}
-        <Link
-          to="/recipes"
-          activeProps={{
-            className: "font-bold",
-          }}
-        >
-          Recipes
-        </Link>
-        <Link
-          to="/shopping"
-          activeProps={{
-            className: "font-bold",
-          }}
-        >
-          Shopping
-        </Link>
-      </div>
-      <hr />
+    <>
+      <MainMenu>
+        <Link to="/">Meal Planner</Link>
+        <Link to="/recipes">Recipes</Link>
+        <Link to="/shopping">Shopping</Link>
+      </MainMenu>
       <Outlet />
-    </React.Fragment>
+    </>
   );
 }
