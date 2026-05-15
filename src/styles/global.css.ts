@@ -12,3 +12,8 @@ globalStyle("body", {
   color: "#111",
   background: "#fafafa",
 });
+
+globalStyle("a", {
+  textDecoration: "none",
+  color: "#000",
+});
