@@ -30,11 +30,13 @@ export function MealPlanner() {
   return (
     <>
       <h1>Viikon ruokasuunnitelma</h1>
-      <button onClick={prevWeek}>-</button>
-      <h2>
-        Viikko {weekNumber} ({mondayOfTheWeek} - {sundayOfTheWeek})
-      </h2>
-      <button onClick={nextWeek}>+</button>
+      <div style={{ display: "flex", flexDirection: "row" }}>
+        <button onClick={prevWeek}>-</button>
+        <h2>
+          Viikko {weekNumber} ({mondayOfTheWeek} - {sundayOfTheWeek})
+        </h2>
+        <button onClick={nextWeek}>+</button>
+      </div>
       <WeekGrid day={day}></WeekGrid>
     </>
   );
